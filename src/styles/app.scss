@@ -1,0 +1,271 @@
+@import "_style";
+
+body {
+  font-family: $font;
+  cursor: crosshair;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.wrap {
+  position: relative;
+  margin: 0 auto;
+  transform: translateY(20%);
+  max-width: 800px;
+  box-shadow: 7px 13px 49px -5px $light-green;
+  overflow: hidden;
+
+  @media screen and (max-width: 900px) {
+    width: fit-content;
+    margin-bottom: 140px;
+  }
+
+  @media screen and (max-width: 420px) {
+    width: 100%;
+  }
+}
+
+.registration {
+  animation: open 0.3s infinite;
+  animation-iteration-count: 1;
+  background: radial-gradient(circle farthest-corner, black 40%, $transparent 0) no-repeat, white;
+  background-position: -280px -160px;
+
+  button {
+    background: #000;
+  }
+}
+
+.signin {
+  animation: open 0.3s infinite;
+  animation-iteration-count: 1;
+  background: black;
+  color: white;
+  background: radial-gradient(circle farthest-corner, $green 40%, black 0) no-repeat, black;
+  background-position: -280px -160px;
+
+  h1 {
+    color: white;
+  }
+}
+
+.left {
+  background: radial-gradient(circle farthest-corner, $green 40%, $transparent 0) no-repeat;
+  background-position: 140px 160px;
+}
+
+.logo-text {
+  font-family: $logo_font;
+  font-size: 130px;
+  color: $green;
+  mix-blend-mode: difference;
+  margin: 90px 0 0 90px;
+  line-height: 82%;
+
+  @media screen and (max-width: 900px) {
+    margin: 10px 0 0 90px;
+  }
+
+  @media screen and (max-width: 420px) {
+    margin: 10px 0 0;
+    text-align: center;
+  }
+}
+
+.right {
+  @include center;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+  }
+
+  &__side {
+    width: 50%;
+    min-height: 450px;
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      min-height: 0;
+    }
+  }
+}
+
+img {
+  width: 20%;
+  margin-bottom: 15px;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+  padding: 5px;
+  transition: border-color 1s ease;
+
+  &:focus {
+    outline: none;
+    border-bottom-color: $pink;
+  }
+}
+
+.password {
+  display: flex;
+  align-items: baseline;
+  position: relative;
+
+  input {
+    padding-right: 25px;
+  }
+
+  &-icon {
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    right: 1%;
+    top: 12%;
+    transition: all 0.1s linear;
+    margin-left: 5px;
+  }
+}
+
+button {
+  background: $green;
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: alias;
+  box-shadow: 0 3px 0 1px $light-green;
+
+  &:hover {
+    box-shadow: none;
+    transform: translateY(3px);
+    transition: all 0.1s linear;
+  }
+
+  &:focus {
+    outline-color: $pink;
+  }
+}
+
+.link {
+  @include link;
+  padding-left: 5px;
+}
+
+h2 {
+  font-size: 34px;
+}
+
+p {
+  @media screen and (max-width: 900px) {
+    margin: 25px 0 42px;
+  }
+}
+
+.glitch {
+  position: relative;
+  transform: scale3d(1,1,1);
+
+  &::after,
+  &::before {
+    @include cover;
+    content: attr(data-text);
+    right: 0;
+    overflow: hidden;
+    background: white;
+    color: black;
+    clip: rect(0, 900px, 0, 0);
+  }
+
+  &::before {
+    left: 7px;
+    text-shadow: 1.5px 0 $green;
+    animation: glitch-effect 3s infinite linear alternate-reverse;
+  }
+
+  &::after {
+    left: 3px;
+    text-shadow: -1.5px 0 $pink;
+    animation: glitch-effect 2s infinite linear alternate-reverse;
+  }
+}
+
+.black {
+  .glitch::after,
+  .glitch::before {
+    left: 0;
+    background: black;
+    color: white;
+  }
+
+  input {
+    border-color: white;
+    background: black;
+    color: white;
+
+    &:focus {
+      outline: none;
+      border-bottom-color: $pink;
+    }
+  }
+
+  .password {
+    &-icon {
+      color: white;
+    }
+  }
+}
+
+@keyframes glitch-effect {
+
+  @for $i from 0 through 20 {
+    #{percentage($i * (1 / 20))} {
+      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+    }
+  }
+}
+
+.fa-github {
+  position: absolute;
+  top: 3%;
+  right: 2%;
+  font-size: 38px;
+  color: $green;
+  transition: all 0.1s linear;
+
+  &:hover {
+    font-size: 42px;
+    color: $pink;
+    cursor: pointer;
+  }
+}
+
+@keyframes open {
+  0% {
+    background: black;
+  }
+
+  100% {}
+}
+
+@keyframes open-signin {
+  0% {
+    background: none;
+  }
+
+  100% {}
+}
