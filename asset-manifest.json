@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/RegistrationCard/static/css/main.177d853b.chunk.css",
+    "main.js": "/RegistrationCard/static/js/main.054f152b.chunk.js",
+    "main.js.map": "/RegistrationCard/static/js/main.054f152b.chunk.js.map",
+    "runtime-main.js": "/RegistrationCard/static/js/runtime-main.7b1e5a50.js",
+    "runtime-main.js.map": "/RegistrationCard/static/js/runtime-main.7b1e5a50.js.map",
+    "static/css/2.d89ac54c.chunk.css": "/RegistrationCard/static/css/2.d89ac54c.chunk.css",
+    "static/js/2.fd16ab2c.chunk.js": "/RegistrationCard/static/js/2.fd16ab2c.chunk.js",
+    "static/js/2.fd16ab2c.chunk.js.map": "/RegistrationCard/static/js/2.fd16ab2c.chunk.js.map",
+    "index.html": "/RegistrationCard/index.html",
+    "precache-manifest.67794a30d6bd70af8e08168399895a5a.js": "/RegistrationCard/precache-manifest.67794a30d6bd70af8e08168399895a5a.js",
+    "service-worker.js": "/RegistrationCard/service-worker.js",
+    "static/css/2.d89ac54c.chunk.css.map": "/RegistrationCard/static/css/2.d89ac54c.chunk.css.map",
+    "static/css/main.177d853b.chunk.css.map": "/RegistrationCard/static/css/main.177d853b.chunk.css.map",
+    "static/js/2.fd16ab2c.chunk.js.LICENSE": "/RegistrationCard/static/js/2.fd16ab2c.chunk.js.LICENSE",
+    "static/media/App.scss": "/RegistrationCard/static/media/vt323-v11-latin-regular.e91ab05f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7b1e5a50.js",
+    "static/css/2.d89ac54c.chunk.css",
+    "static/js/2.fd16ab2c.chunk.js",
+    "static/css/main.177d853b.chunk.css",
+    "static/js/main.054f152b.chunk.js"
+  ]
+}
