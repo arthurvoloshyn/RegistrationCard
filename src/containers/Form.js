@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Alert from "react-s-alert";
-import "react-s-alert/dist/s-alert-default.css";
-import "react-s-alert/dist/s-alert-css-effects/scale.css";
 import { configAlert, stackAlert } from "../utils";
 import Registration from "../components/Registration";
+import "react-s-alert/dist/s-alert-default.css";
+import "react-s-alert/dist/s-alert-css-effects/scale.css";
 
 import SignIn from "../components/SignIn";
 
