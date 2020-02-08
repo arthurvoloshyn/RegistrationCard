@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+// Configuration and helpers
+@import 'abstracts/variables', 'abstracts/mixins', 'abstracts/functions';
+
+// Vendors
+@import 'vendors/normalize';
+
+// Base stuff
+@import 'base/fonts', 'base/base', 'base/typography';
+
+// Layout-related sections
+@import 'layout/header';
+
+// Components
+@import 'components/inputs', 'components/buttons', 'components/registration', 'components/signin', 'components/password';
+
+// Page-specific styles
+@import 'pages/home', 'pages/error';
+
+// Themes
+@import 'themes/default', 'themes/dark';

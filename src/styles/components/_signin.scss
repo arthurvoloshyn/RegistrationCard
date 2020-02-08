@@ -1,0 +1,12 @@
+.signin {
+  animation: open 0.3s infinite;
+  animation-iteration-count: 1;
+  background: #000;
+  background: radial-gradient(circle farthest-corner, $green 40%, #000 0) no-repeat, #000;
+  background-position: -280px -160px;
+  color: #fff;
+
+  h1 {
+    color: #fff;
+  }
+}

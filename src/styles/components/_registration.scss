@@ -1,0 +1,10 @@
+.registration {
+  animation: open 0.3s infinite;
+  animation-iteration-count: 1;
+  background: radial-gradient(circle farthest-corner, #000 40%, $transparent 0) no-repeat, #fff;
+  background-position: -280px -160px;
+
+  button {
+    background: #000;
+  }
+}

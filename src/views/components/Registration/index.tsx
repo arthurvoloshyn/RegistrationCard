@@ -1,19 +1,23 @@
-import * as React from "react";
-import { AuthorizationProps } from "../../../models/Authorization";
-import UtilsController from "../../../controllers/Utils";
-import Password from "../../containers/Password";
-import Logo from "../Logo";
+import * as React from 'react';
 
-const { registrationImgSrc } = UtilsController;
+import { AuthorizationPropsInterface } from '../../../interfaces/Authorization';
 
-const Registration: React.SFC<AuthorizationProps> = ({ onClick, onSubmit }) => (
+import Password from '../../containers/Password';
+
+import Logo from '../Logo';
+
+import logo from '../../../img/logo.png';
+
+const Registration: React.FC<AuthorizationPropsInterface> = ({ onClick, onSubmit }) => (
   <div className="card registration">
     <Logo />
 
     <div className="card__side right">
-      <h2 className="glitch" data-text="Welcome">Welcome</h2>
+      <h2 className="glitch" data-text="Welcome">
+        Welcome
+      </h2>
 
-      <img src={registrationImgSrc} alt="Web" />
+      <img src={logo} alt="Web" />
 
       <form onSubmit={onSubmit}>
         <input placeholder="Name" type="text" required />
@@ -25,14 +29,19 @@ const Registration: React.SFC<AuthorizationProps> = ({ onClick, onSubmit }) => (
         <button type="submit">Registration</button>
       </form>
 
-      <p>Already a member <span className="link" onClick={onClick}>Sign in</span></p>
+      <p>
+        Already a member{' '}
+        <span className="link" onClick={onClick}>
+          Sign in
+        </span>
+      </p>
     </div>
   </div>
 );
 
 Registration.defaultProps = {
   onClick: () => {},
-  onSubmit: () => {},
+  onSubmit: () => {}
 };
 
 export default Registration;

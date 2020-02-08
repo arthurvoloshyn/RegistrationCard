@@ -1,49 +1,44 @@
-import React, { Component } from "react";
-import Alert from "react-s-alert";
-import { FormPropsModel, FormStateModel } from "../../../models/Form";
-import UtilsController from "../../../controllers/Utils";
-import FormController from "../../../controllers/Form";
-import Registration from "../../components/Registration";
-import SignIn from "../../components/SignIn";
-import "react-s-alert/dist/s-alert-default.css";
-import "react-s-alert/dist/s-alert-css-effects/scale.css";
+import React, { Component } from 'react';
+import Alert from 'react-s-alert';
 
-const { stackAlert } = UtilsController;
-const { handleClick, handleSubmit } = FormController;
+import { FormStateInterface } from '../../../interfaces/Form';
 
-class Form extends Component<FormPropsModel, FormStateModel> {
+import Registration from '../../components/Registration';
+import SignIn from '../../components/SignIn';
+
+import 'react-s-alert/dist/s-alert-default.css';
+import 'react-s-alert/dist/s-alert-css-effects/scale.css';
+
+class Form extends Component<{}, FormStateInterface> {
   state = {
-    active: "registration",
+    active: 'registration'
   };
 
-  handleClick = () => {
-    const { active } = this.state;
+  handleClick = (): void => {
+    this.setState(({ active }) => ({
+      active: active === 'registration' ? 'signIn' : 'registration'
+    }));
+  };
 
-    handleClick(active, newActive => {
-      this.setState({
-        active: newActive,
-      });
+  handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+    e.preventDefault();
+
+    Alert.success('Success', {
+      position: 'top-right',
+      effect: 'scale',
+      beep: false,
+      timeout: 2000
     });
   };
 
-  render() {
+  render(): React.ReactElement {
     const { active } = this.state;
 
     return (
       <div className="wrap">
-        {(active === "registration") ? (
-          <Registration
-            onClick={this.handleClick}
-            onSubmit={handleSubmit}
-          />
-        ) : (
-          <SignIn
-            onClick={this.handleClick}
-            onSubmit={handleSubmit}
-          />
-        )}
+        {active === 'registration' ? <Registration onClick={this.handleClick} onSubmit={this.handleSubmit} /> : <SignIn onClick={this.handleClick} onSubmit={this.handleSubmit} />}
 
-        <Alert stack={stackAlert} />
+        <Alert stack={{ limit: 3 }} />
       </div>
     );
   }

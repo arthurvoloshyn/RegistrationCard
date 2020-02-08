@@ -1,0 +1,84 @@
+.wrap {
+  box-shadow: 7px 13px 49px -5px $light-green;
+  margin: 0 auto;
+  max-width: 800px;
+  overflow: hidden;
+  position: relative;
+  transform: translateY(20%);
+
+  @media screen and (max-width: 900px) {
+    margin-bottom: 140px;
+    width: fit-content;
+  }
+
+  @media screen and (max-width: 420px) {
+    width: 100%;
+  }
+}
+
+.left {
+  background: radial-gradient(circle farthest-corner, $green 40%, $transparent 0) no-repeat;
+  background-position: 140px 160px;
+}
+
+.logo-text {
+  color: $green;
+  font-family: $logo_font;
+  font-size: 130px;
+  line-height: 82%;
+  margin: 90px 0 0 90px;
+  mix-blend-mode: difference;
+
+  @media screen and (max-width: 900px) {
+    margin: 10px 90px 0;
+  }
+
+  @media screen and (max-width: 510px) {
+    margin: 10px 0 0;
+    text-align: center;
+  }
+}
+
+.right {
+  @include center;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+
+  &__side {
+    min-height: 450px;
+    width: 50%;
+
+    @media screen and (max-width: 900px) {
+      min-height: 0;
+      width: 100%;
+
+      p {
+        margin: 25px 0 42px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+  }
+}
+
+.link {
+  @include link;
+  padding-left: 5px;
+}
+
+@keyframes open {
+  0% {
+    background: #000;
+  }
+}
+
+@keyframes open-signin {
+  0% {
+    background: none;
+  }
+}

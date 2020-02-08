@@ -1,0 +1,34 @@
+.error {
+  @include absolute;
+  @include fullScreen;
+  @include center;
+  background: #121212;
+
+  &__bg {
+    @include absolute;
+    @include fullScreen;
+    @include background;
+    background-image: image('error.jpeg', '../');
+    background-repeat: no-repeat;
+    mix-blend-mode: overlay;
+  }
+
+  &__text {
+    @include center;
+    @include background;
+    box-sizing: border-box;
+    color: #fff;
+    flex-direction: column;
+    font-family: $font;
+    font-size: 1.5em;
+    height: 100vh;
+    padding: 0 20px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+
+    a {
+      @include link;
+    }
+  }
+}

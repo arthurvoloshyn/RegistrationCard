@@ -1,0 +1,18 @@
+button {
+  background: $green;
+  border: none;
+  box-shadow: 0 3px 0 1px $light-green;
+  color: #fff;
+  cursor: alias;
+  padding: 10px;
+
+  &:hover {
+    box-shadow: none;
+    transform: translateY(3px);
+    transition: all 0.1s linear;
+  }
+
+  &:focus {
+    outline-color: $pink;
+  }
+}

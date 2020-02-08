@@ -1,0 +1,35 @@
+.glitch {
+  position: relative;
+  transform: scale3d(1, 1, 1);
+
+  &:after,
+  &:before {
+    @include absolute;
+    background: #fff;
+    clip: rect(0, 900px, 0, 0);
+    color: #000;
+    content: attr(data-text);
+    overflow: hidden;
+    right: 0;
+  }
+
+  &:before {
+    animation: glitch-effect 3s infinite linear alternate-reverse;
+    left: 7px;
+    text-shadow: 1.5px 0 $green;
+  }
+
+  &:after {
+    animation: glitch-effect 2s infinite linear alternate-reverse;
+    left: 3px;
+    text-shadow: -1.5px 0 $pink;
+  }
+}
+
+@keyframes glitch-effect {
+  @for $i from 0 through 20 {
+    #{percentage($i * (1 / 20))} {
+      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+    }
+  }
+}

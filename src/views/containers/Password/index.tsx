@@ -1,42 +1,26 @@
-import React, { Component } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEyeSlash, faEye } from "@fortawesome/free-regular-svg-icons";
-import { PasswordPropsModel, PasswordStateModel } from "../../../models/Password";
-import PasswordController from "../../../controllers/Password";
+import React, { Component } from 'react';
 
-const { handleClick } = PasswordController;
+import { PasswordStateInterface } from '../../../interfaces/Password';
 
-class Password extends Component<PasswordPropsModel, PasswordStateModel> {
+class Password extends Component<{}, PasswordStateInterface> {
   state = {
-    show: false,
+    show: false
   };
 
-  handleClick = () => {
-    const { show } = this.state;
-
-    handleClick(show, changeShow => {
-      this.setState({
-        show: changeShow,
-      });
-    });
+  handleClick = (): void => {
+    this.setState(({ show }) => ({
+      show: !show
+    }));
   };
 
-  render() {
+  render(): React.ReactElement {
     const { show } = this.state;
 
     return (
       <div className="password">
-        {show ? (
-          <input placeholder="Password" type="text" required />
-        ) : (
-          <input placeholder="Password" type="password" required />
-        )}
+        <input placeholder="Password" type={show ? 'text' : 'password'} required />
         <div className="password-icon" onClick={this.handleClick}>
-          {show ? (
-            <FontAwesomeIcon icon={faEyeSlash} />
-          ) : (
-            <FontAwesomeIcon icon={faEye} />
-          )}
+          <i className={`fa fa-fw ${show ? 'fa-eye-slash' : 'fa-eye'}`} />
         </div>
       </div>
     );

@@ -1,0 +1,12 @@
+input {
+  border: none;
+  border-bottom: 1px solid #000;
+  margin-bottom: 20px;
+  padding: 5px;
+  transition: border-color 1s ease;
+
+  &:focus {
+    border-bottom-color: $pink;
+    outline: none;
+  }
+}

@@ -1,0 +1,27 @@
+@mixin center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+@mixin fullScreen {
+  height: 100vh;
+  width: 100vw;
+}
+
+@mixin absolute {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+@mixin link {
+  color: $pink;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@mixin background {
+  background-position: center;
+  background-size: cover;
+}

@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from 'react';
 
-const Logo: React.SFC = () => (
+const Logo: React.FC = () => (
   <div className="card__side left">
-    <h1 className="logo-text">web<br />addict</h1>
+    <h1 className="logo-text">web addict</h1>
   </div>
 );
 
