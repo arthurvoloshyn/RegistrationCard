@@ -12,12 +12,7 @@ module.exports = withPlugins([
   [withFonts],
   [withImages],
   [withCSS],
-  [
-    withSass,
-    {
-      sassLoaderOptions: {}
-    }
-  ],
+  [withSass],
   [
     withOffline,
     {
