@@ -20,7 +20,8 @@
     "plugin:jest/recommended",
     "plugin:react/recommended",
     "plugin:prettier/recommended",
-    "plugin:import/errors"
+    "plugin:import/errors",
+    "plugin:import/warnings"
   ],
   "env": {
     "es6": true,
@@ -51,7 +52,7 @@
     "arrow-spacing": ["error", { "before": true, "after": true }],
     "block-spacing": ["error", "always"],
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
-    "camelcase": ["error", { "properties": "never", allow: ["^UNSAFE_"] }],
+    "camelcase": ["error", { "properties": "never", "allow": ["^UNSAFE_"] }],
     "comma-dangle": ["error", {
       "arrays": "never",
       "objects": "never",
@@ -186,7 +187,7 @@
     "no-with": "error",
     "object-curly-spacing": ["error", "always"],
     "object-property-newline": ["error", { "allowMultiplePropertiesPerLine": true }],
-    "one-var": ["error", { separateRequires: true, var: "never", "let": "never" }],
+    "one-var": ["error", { "separateRequires": true, "var": "never", "let": "never" }],
     "operator-linebreak": ["error", "after", { "overrides": { "?": "before", ":": "after" } }],
     "padded-blocks": ["error", { "blocks": "never", "switches": "never", "classes": "never" }],
     "prefer-promise-reject-errors": "error",
