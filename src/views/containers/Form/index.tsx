@@ -15,7 +15,7 @@ class Form extends Component<{}, FormStateInterface> {
   };
 
   handleClick = (): void => {
-    this.setState(({ active }) => ({
+    this.setState(({ active }: FormStateInterface): FormStateInterface => ({
       active: active === 'registration' ? 'signIn' : 'registration'
     }));
   };
