@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import Form from './views/containers/Form';
 import Header from './views/components/Header';

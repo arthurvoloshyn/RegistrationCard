@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { NextPage, NextPageContext } from 'next';
 
 import { ErrorPagePropsInterface, ErrorPageType } from '../interfaces/ErrorPage';
