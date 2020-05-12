@@ -40,7 +40,7 @@ const SignIn: React.FC<AuthorizationPropsInterface> = ({ onClick, onSubmit }) =>
 
 SignIn.defaultProps = {
   onClick: () => {},
-  onSubmit: () => {}
+  onSubmit: () => {},
 };
 
 export default SignIn;

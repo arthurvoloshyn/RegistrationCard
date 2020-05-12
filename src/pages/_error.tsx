@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { NextPage, NextPageContext } from 'next';
 
-import { ErrorPagePropsInterface, ErrorPageType } from '../interfaces/ErrorPage';
+import { ErrorPagePropsInterface } from '../interfaces/ErrorPage';
 
 import { ErrorProvider } from '../context';
 
@@ -13,7 +13,7 @@ const ErrorPage: NextPage<ErrorPagePropsInterface> = ({ statusCode }) => (
   </ErrorProvider>
 );
 
-ErrorPage.getInitialProps = ({ res, err }: NextPageContext): ErrorPageType => {
+ErrorPage.getInitialProps = ({ res, err }: NextPageContext) => {
   const statusCode: number = res ? res.statusCode : err ? err.statusCode : 404;
 
   return { statusCode };

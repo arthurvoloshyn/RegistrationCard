@@ -11,12 +11,12 @@ import 'react-s-alert/dist/s-alert-css-effects/scale.css';
 
 class Form extends Component<{}, FormStateInterface> {
   state = {
-    active: 'registration'
+    active: 'registration',
   };
 
   handleClick = (): void => {
     this.setState(({ active }) => ({
-      active: active === 'registration' ? 'signIn' : 'registration'
+      active: active === 'registration' ? 'signIn' : 'registration',
     }));
   };
 
@@ -27,7 +27,7 @@ class Form extends Component<{}, FormStateInterface> {
       position: 'top-right',
       effect: 'scale',
       beep: false,
-      timeout: 2000
+      timeout: 2000,
     });
   };
 
@@ -36,7 +36,11 @@ class Form extends Component<{}, FormStateInterface> {
 
     return (
       <div className="wrap">
-        {active === 'registration' ? <Registration onClick={this.handleClick} onSubmit={this.handleSubmit} /> : <SignIn onClick={this.handleClick} onSubmit={this.handleSubmit} />}
+        {active === 'registration' ? (
+          <Registration onClick={this.handleClick} onSubmit={this.handleSubmit} />
+        ) : (
+          <SignIn onClick={this.handleClick} onSubmit={this.handleSubmit} />
+        )}
 
         <Alert stack={{ limit: 3 }} />
       </div>

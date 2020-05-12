@@ -4,12 +4,12 @@ import { PasswordStateInterface } from '../../../interfaces/Password';
 
 class Password extends Component<{}, PasswordStateInterface> {
   state = {
-    show: false
+    show: false,
   };
 
   handleClick = (): void => {
     this.setState(({ show }) => ({
-      show: !show
+      show: !show,
     }));
   };
 

@@ -41,7 +41,7 @@ const Registration: React.FC<AuthorizationPropsInterface> = ({ onClick, onSubmit
 
 Registration.defaultProps = {
   onClick: () => {},
-  onSubmit: () => {}
+  onSubmit: () => {},
 };
 
 export default Registration;
