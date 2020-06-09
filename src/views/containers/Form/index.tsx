@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Alert from 'react-s-alert';
 
-import { FormStateInterface } from '../../../interfaces/Form';
+import { FormPropsInterface, FormStateInterface } from '../../../interfaces/Form';
 
 import Registration from '../../components/Registration';
 import SignIn from '../../components/SignIn';
@@ -9,7 +9,7 @@ import SignIn from '../../components/SignIn';
 import 'react-s-alert/dist/s-alert-default.css';
 import 'react-s-alert/dist/s-alert-css-effects/scale.css';
 
-class Form extends Component<{}, FormStateInterface> {
+class Form extends Component<FormPropsInterface, FormStateInterface> {
   state = {
     active: 'registration',
   };

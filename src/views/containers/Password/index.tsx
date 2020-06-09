@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import { PasswordStateInterface } from '../../../interfaces/Password';
+import { PasswordPropsInterface, PasswordStateInterface } from '../../../interfaces/Password';
 
-class Password extends Component<{}, PasswordStateInterface> {
+class Password extends Component<PasswordPropsInterface, PasswordStateInterface> {
   state = {
     show: false,
   };
