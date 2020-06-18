@@ -7,7 +7,7 @@ class Password extends Component<PasswordPropsInterface, PasswordStateInterface>
     show: false,
   };
 
-  public handleClick = (): void => {
+  handleClick = (): void => {
     this.setState(({ show }) => ({
       show: !show,
     }));
