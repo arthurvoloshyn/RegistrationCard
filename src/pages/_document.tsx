@@ -9,7 +9,7 @@ import Document, {
   DocumentProps,
 } from 'next/document';
 
-class MyDocument extends Document {
+class MyDocument extends Document<DocumentProps> {
   public static getInitialProps = async (ctx: DocumentContext): Promise<DocumentInitialProps> => {
     const initialProps: DocumentInitialProps = await Document.getInitialProps(ctx);
 

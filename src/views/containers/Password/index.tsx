@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { PasswordPropsInterface, PasswordStateInterface } from '../../../interfaces/Password';
 
 class Password extends Component<PasswordPropsInterface, PasswordStateInterface> {
-  state = {
+  readonly state = {
     show: false,
   };
 

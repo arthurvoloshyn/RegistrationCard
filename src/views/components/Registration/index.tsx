@@ -8,7 +8,10 @@ import Logo from '../Logo';
 
 import logo from '../../../img/logo.png';
 
-const Registration: React.FC<AuthorizationPropsInterface> = ({ onClick, onSubmit }) => (
+const Registration: React.FC<AuthorizationPropsInterface> = ({
+  onClick,
+  onSubmit,
+}): React.ReactElement => (
   <div className="card registration">
     <Logo />
 

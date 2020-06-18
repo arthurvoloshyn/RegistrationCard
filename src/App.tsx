@@ -5,7 +5,7 @@ import Header from './views/components/Header';
 
 import './styles/main.scss';
 
-const App: React.FC = () => (
+const App: React.FC = (): React.ReactElement => (
   <>
     <Header />
     <Form />

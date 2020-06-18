@@ -8,7 +8,7 @@ import { ErrorProvider } from '../context';
 
 import Error from '../Error';
 
-const ErrorPage: NextPage<ErrorPagePropsInterface> = ({ statusCode }) => (
+const ErrorPage: NextPage<ErrorPagePropsInterface> = ({ statusCode }): React.ReactElement => (
   <ErrorProvider value={statusCode}>
     <Error />
   </ErrorProvider>

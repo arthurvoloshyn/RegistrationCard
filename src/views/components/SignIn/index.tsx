@@ -8,7 +8,10 @@ import Logo from '../Logo';
 
 import logoWhite from '../../../img/logo-white.png';
 
-const SignIn: React.FC<AuthorizationPropsInterface> = ({ onClick, onSubmit }) => (
+const SignIn: React.FC<AuthorizationPropsInterface> = ({
+  onClick,
+  onSubmit,
+}): React.ReactElement => (
   <div className="card signin">
     <Logo />
 

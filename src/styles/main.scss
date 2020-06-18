@@ -13,7 +13,8 @@
 @import 'layout/header';
 
 // Components
-@import 'components/inputs', 'components/buttons', 'components/registration', 'components/signin', 'components/password';
+@import 'components/inputs', 'components/buttons', 'components/registration', 'components/signin',
+  'components/password';
 
 // Page-specific styles
 @import 'pages/home', 'pages/error';

@@ -3,6 +3,6 @@ import { NextPage } from 'next';
 
 import App from '../App';
 
-const Home: NextPage = () => <App />;
+const Home: NextPage = (): React.ReactElement => <App />;
 
 export default Home;

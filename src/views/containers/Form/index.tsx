@@ -10,7 +10,7 @@ import 'react-s-alert/dist/s-alert-default.css';
 import 'react-s-alert/dist/s-alert-css-effects/scale.css';
 
 class Form extends Component<FormPropsInterface, FormStateInterface> {
-  state = {
+  readonly state = {
     active: 'registration',
   };
 

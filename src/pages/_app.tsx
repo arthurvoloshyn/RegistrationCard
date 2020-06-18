@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
-const MyApp: NextPage<AppProps> = ({ Component, pageProps }) => (
+const MyApp: NextPage<AppProps> = ({ Component, pageProps }): React.ReactElement => (
   <>
     <Head>
       <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />

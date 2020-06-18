@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const Header: React.FC = () => (
+const Header: React.FC = (): React.ReactElement => (
   <header>
     <a
       target="_blank"
