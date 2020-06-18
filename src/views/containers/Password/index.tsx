@@ -7,13 +7,13 @@ class Password extends Component<PasswordPropsInterface, PasswordStateInterface>
     show: false,
   };
 
-  handleClick = (): void => {
+  public handleClick = (): void => {
     this.setState(({ show }) => ({
       show: !show,
     }));
   };
 
-  render(): React.ReactElement {
+  public render(): React.ReactElement<PasswordPropsInterface> {
     const { show } = this.state;
 
     return (

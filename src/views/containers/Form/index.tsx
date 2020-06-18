@@ -14,13 +14,13 @@ class Form extends Component<FormPropsInterface, FormStateInterface> {
     active: 'registration',
   };
 
-  handleClick = (): void => {
+  public handleClick = (): void => {
     this.setState(({ active }) => ({
       active: active === 'registration' ? 'signIn' : 'registration',
     }));
   };
 
-  handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+  public handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
 
     Alert.success('Success', {
@@ -31,7 +31,7 @@ class Form extends Component<FormPropsInterface, FormStateInterface> {
     });
   };
 
-  render(): React.ReactElement {
+  public render(): React.ReactElement<FormPropsInterface> {
     const { active } = this.state;
 
     return (
