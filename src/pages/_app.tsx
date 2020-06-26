@@ -6,6 +6,8 @@ import Head from 'next/head';
 const MyApp: NextPage<AppProps> = ({ Component, pageProps }): React.ReactElement => (
   <>
     <Head>
+      <meta charSet="utf-8" />
+      <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
       <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1" />
       <meta name="theme-color" content="#000000" />
       <meta name="description" content="Web site created using next.js" />
