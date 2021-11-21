@@ -9,9 +9,6 @@
 // Base stuff
 @import 'base/fonts', 'base/base', 'base/typography';
 
-// Layout-related sections
-@import 'layout/header';
-
 // Components
 @import 'components/inputs', 'components/buttons', 'components/registration', 'components/signin',
   'components/password';
